@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+root {
+    --min-font-size: 15px;
+    --fluid-font-size: 2vw;
+    --max-font-size: 18px;
+}
+
+html,
+body {
+    font-size: 18px;
+    font-size: clamp( var(--min-font-size), var(--fluid-font-size) , var(--max-font-size) ); 
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+}
+
+#__next {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;
+}
+
+main {
+    flex: 1;
+    margin: 0 4rem;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+
+.main-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+}
+
+.main-nav li {
+    margin: 0 0.5rem 0
+}
+
+.main-nav__link {
+    display: block;
+    padding: 0.125rem 0.5rem;
+}
+
+footer {
+    font-size: 0.95rem;;
+    padding: 1rem;
+}
+
+.skip-link {
+    display: block;
+    text-align: center;
+    color: #f9f9f9;
+    background: #333;
+    width: auto;
+    z-index: 128;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    height: auto;
+    padding: 10px;
+}
